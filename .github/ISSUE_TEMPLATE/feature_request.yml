@@ -1,0 +1,48 @@
+name: 💡 Feature request
+description: Suggest a capability or improvement for HansenAI.
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are welcome. The best ones come with the problem behind them, not just the solution.
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do that HansenAI makes hard or impossible today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you'd like to see
+      description: Your idea for solving it. Rough is fine.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of the platform?
+      options:
+        - Teach (learning / labs / tutor)
+        - Guide (engagement copilot)
+        - Execute (automation / tooling)
+        - Core engine
+        - Docs
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+    validations:
+      required: false
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Alignment
+      options:
+        - label: This keeps HansenAI aligned with authorized, defensive, and educational use.
+          required: true

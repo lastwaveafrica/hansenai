@@ -1,0 +1,54 @@
+name: 🐛 Bug report
+description: Something in HansenAI isn't working the way it should.
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. The more precise you are, the faster it gets fixed.
+
+        **Not a bug but a security vulnerability?** Stop here and report it privately — see [SECURITY.md](../blob/community/SECURITY.md).
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you do, and what went wrong?
+      placeholder: When I ran X, I expected Y, but got Z.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The minimal steps someone else can follow to see the same thing.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Version/commit, OS, and anything else relevant.
+      placeholder: |
+        - HansenAI version/commit:
+        - OS:
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this isn't a duplicate.
+          required: true
+        - label: This is a bug report, not a security vulnerability (those go through private reporting).
+          required: true
